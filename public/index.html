@@ -1,14 +1,86 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
   <head>
     <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="285198512418-ekjr12rdggi140n1uk04rhv3l6jd9ino.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>CS193x Final Project</title>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <script src="/js/script.js" defer></script>
-    </script>
+  	<title>TriviaPlay</title>
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/triviaplay.png" sizes="32x32" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton&effect=neon">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&effect=fire-animation" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="js/results-screen.js" defer></script>
+    <script src="js/question-display.js" defer></script>
+    <script src="js/category-screen.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   </head>
   <body>
-    <!-- TODO(you): Add the HTML necessary to complete your final project. -->
+
+  <div class="content">
+  <h1 class = "font-effect-neon sz"id="name">TriviaPlay </h1>
+  <em><h2 id="motto"class ="lobster-font font-effect-fire-animation">Get Ready to Crack and Burn your Brains!</h2></em>
+  <div id="register" class= "inactive" >
+    <fieldset>
+      <form>
+        <h2>Name:</h2>
+        <input type="text" id="name-input" placeholder="Jane Doe"/>
+        <h2> Email: </h2>
+        <input type="text" id="email-input" placeholder="email" />
+        <input type="submit" value="Go"/>
+        <input class= "play-sound" onclick='responsiveVoice.speak("Enter Name, in the first textbox and then your email in the second textbox");' type='button' value='🔊 Press For Sound'/> 
+      </form>
+    </fieldset>
+  </div>
+
+  <div class = "category inactive">
+  <h2 class="header" >Categories</h2>
+  <nav >
+    <div class = "dsp_imgs">
+  	<div class="navigation sports">
+     <img  alt="Messi picture" src="images/messi.jpg" class= "select_img"><p class="categ">Sports</p></div>
+  	<div class="navigation music">
+      <img  alt="Beyonce picture" src="images/beyonce.jpg" class="select_img"><p class="categ">Music</p></div>
+  	<div class="navigation movies">
+      <img  alt="Game Of Thrones Picture" src="images/got.jpg" class= "select_img"><p class="categ"> Movies</p></div>
+  	<div class="navigation leaderboard">
+        <img  alt="Leaderboard Picture" src="images/leaderboard.png" class= "select_img"><p class="categ">Leaderboard</p></div>
+  	<br>
+  </div>
+  </nav>
+  </div>
+  </div>
+
+  <div id = "rankings" class="inactive" >
+  <h1 class= "roll-fame">Roll of Fame</h1>
+  <div id= "realData"></div>
+  <button class="results-buttons" id = "back-rank">Back</button>
+  </div>
+  <div id="loadScreen" class="inactive">
+    <p id="loadPar">Loading...</p>
+  </div>
+  <div class= "questions inactive">
+    <header id="triviaQuestion"> What is  the year of release of Game of Thrones?</header>
+    <div id="choices">
+      <div class="selection">A</div>
+      <div class="selection">B</div>
+      <div class="selection">C</div>
+      <div class="selection">D</div>
+    </div>
+  </div>
+
+  <div class="inactive respage">
+  <div id ="results" >
+    <header id = "results-head"> Congratulations</header>
+    <div id = "giphy"></div>
+     <h2 id = "rec" class="inactive">Recommendations Based On Failed Category</h2>
+    <div id = "recommendation"></div>
+    <button id = "restart-button" class = "results-buttons">Restart</button>
+    <button id = "category-button" class="results-buttons">Choose Category</button>
+  </div>
+  </div>
   </body>
-</html>
+  </html>

@@ -1,3 +1,256 @@
-/**
- * TODO(you): Add the CSS necessary to complete your final project.
- **/
+nav {
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3em;
+}
+#name{
+  font-family: Monoton;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.content{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Monoton;
+}
+
+.lobster-font{
+  font-family: 'Lobster', cursive;
+}
+body {
+  background: #111;
+  text-align: center;
+}
+.select_img{
+  display: block;
+  border-radius: 50%;
+  height: 30vh;
+  width: 30vw;
+  margin: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dsp_imgs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.inactive{
+  display: none;
+}
+#choices{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  text-align: center;
+  flex-grow: 1;
+}
+.selection{
+  display: flex;
+  height: 30vh;
+  width: 40vw;
+  margin: 10px;
+  border: 2px dotted purple;
+  align-items: center;
+  justify-content: center;
+}
+header{
+  color: white;
+  font-size: 4em;
+}
+#results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: white;
+
+}
+#results-buttons{
+  width: 100%;
+  height: 20px;
+  color:#ffffff;
+  font-family:Arial;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 8px;
+  background-color: #599bb3;
+  text-shadow: 0px 6px 0px #3d768a;
+  border-radius:8px;
+	border:3px solid #29668f;
+  padding:13px 32px;
+  text-decoration:none;
+}
+#results-buttons:hover{
+  background-color:#408c99;
+}
+#back-rank{
+  color: white;
+}
+#register{
+  color: white;
+
+}
+#register fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  max-width: 700px;
+}
+#register input, #register select {
+  border: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  height: 2em;
+	border: 6px solid purple;
+}
+#register input[type=text], #register select {
+  width: 100%;
+  border-radius: 5%;
+}
+
+#register input[type=submit] {
+  background-color: purple;
+  border: 0;
+  width: 50%%;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.answer_format{
+	background-color: #696969;
+	font-size: 1.5em;
+	font-color: black;
+	border-radius: 25px;
+	background-size:cover;
+}
+.questions{
+	font-family: 'Open Sans', sans-serif;
+}
+#results{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#recommendation{
+	display:flex;
+	font-size: 2em;
+	color: red;
+	justify-content: center;
+	align-items: center;
+}
+#rank{
+
+}
+#realData{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#rankings{
+  color: white;
+}
+
+.rank{
+  font-size: 1.5em;
+  /*display: flex;*/
+  /*border: 2px solid grey;*/
+  /*margin: 0px;*/
+  width: 100%;
+  /*text-align: center;*/
+}
+.tableFormat {
+    width: 100vw;
+    border: 1px solid pink;
+    margin: 20px;
+    border-collapse: collapse;
+}
+.categ{
+  font-size: 1em;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.categ:hover{
+	  color: hotpink;
+}
+#rec{
+  color:white;
+}
+.giph_img{
+  width: 50vw;
+  height: 40vh;
+}
+.roll-fame{
+  width: 300px;
+  background-color: #1BB1A3 ;
+  font-family: Monoton;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2px;
+  animation-name: fame-animate;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+#triviaQuestion{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+}
+.play-sound{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: purple;
+  margin-top: 5px;
+  border-radius: 8px; 
+}
+@keyframes fame-animate{
+  0% {transform: scale(1,1);}
+  100%{transform: scale(2,2);}
+
+}
+a:hover {
+    color: hotpink;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+.sz{
+  display: flex;
+  width: 100%
+  font-size: 4em;
+}
+a{
+  color: white;
+}
+.header{
+
+}
+#loadPar{
+	color: white;
+	font-size: 2em;
+	font-style: italic;
+}
