@@ -19,7 +19,7 @@
             return;
           }
           this.nameElem.classList.add("inactive");
-          console.log("creating category categoryScreen");
+          // console.log("creating category categoryScreen");
           this.categoryScreen = new CategoryScreen(this.nameHolder.value, this.emailHolder.value);
         }
       }

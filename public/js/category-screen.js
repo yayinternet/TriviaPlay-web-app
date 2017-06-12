@@ -9,7 +9,17 @@
 				this.containerElem.classList.remove("inactive");
 				this.addCategoryListeners = this.addCategoryListeners.bind(this);
 				this.questionScreen;
+				this.changeUserButton = document.querySelector("#change-user");
+				this.changePlayer = this.changePlayer.bind(this);
+				this.changeUserButton.addEventListener('click', this.changePlayer);
 				this.addCategoryListeners();
+			}
+
+			changePlayer(){
+				let categElem = document.querySelector(".category");
+				categElem.classList.add("inactive");
+				let register = document.querySelector("#register");
+                register.classList.remove("inactive");
 			}
 
 			addCategoryListeners(){
@@ -18,7 +28,7 @@
 					item.addEventListener('click',this.onSelectCategory);
 				}
 			}
-			
+
 			async onSelectCategory(event){
 				let currentContainerElem = event.currentTarget;
 				let categElem = document.querySelector(".category");

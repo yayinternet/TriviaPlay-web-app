@@ -245,6 +245,11 @@ a:visited {
 a{
   color: white;
 }
+#change-user{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 .header{
 
 }
