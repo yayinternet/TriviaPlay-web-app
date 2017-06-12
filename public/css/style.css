@@ -92,6 +92,9 @@ header{
 .results-buttons:hover{
   background-color:#408c99;
 }
+#results-head{
+  font-size: 2em;
+}
 #back-rank{
   color: white;
 }

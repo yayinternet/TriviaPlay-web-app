@@ -13,6 +13,7 @@
             this.displayResults = this.displayResults.bind(this);
             this.restartBut = document.querySelector("#restart-button");
             this.chooseCategBut = document.querySelector("#category-button");
+            this.image;
             this.displayResults();
           }
 
@@ -27,35 +28,36 @@
             this.restartBut.addEventListener('click', function(){
               currentScreen.classList.add("inactive");
               let repeatQuestions = new QuestionScreen(this.jsonData,this.name, this.email, this.category);
+              this.image.classList.add('inactive');
+              this.image.parentNode.removeChild(this.image);
               return;
             }.bind(this));
 
             this.chooseCategBut.addEventListener('click',function(){
               currentScreen.classList.add("inactive");
               let newQuestions = new CategoryScreen(this.name,this.email);
+              this.image.classList.add('inactive');
+              this.image.parentNode.removeChild(this.image);
               return;
             }.bind(this));
+             this.image = new Image();
             if (this.numCorrect === 10){
-              let image = new Image();
-              image.src = "images/winner.gif";
-              image.classList.add("giph_img");
-              giphyElem.appendChild(image);
-
+              this.image.src = "images/winner.gif";
+              this.image.classList.add("giph_img");
+              giphyElem.appendChild(this.image);
               this.congratsDiv.textContent = "You, "+this.name+" are Awesome!";
             }else if(this.numCorrect >= 5){
               recTitle.classList.remove("inactive");
-              let image = new Image();
-              image.classList.add("giph_img");
-              image.src = "images/loser.gif";
-              giphyElem.appendChild(image);
+              this.image.classList.add("giph_img");
+              this.image.src = "images/loser.gif";
+              giphyElem.appendChild(this.image);
               this.congratsDiv.textContent = "You, "+this.name+" got "+this.calculatePercentage()+"% You are good, but not Awesome!";
               rec.textContent = this.getRecommendation();
             }else{
               recTitle.classList.remove("inactive");
-               let image = new Image();
-              image.src = "images/loser.gif";
-              image.classList.add("giph_img");
-              giphyElem.appendChild(image);
+              this.image.src = "images/loser.gif";
+              this.image.classList.add("giph_img");
+              giphyElem.appendChild(this.image);
               this.congratsDiv.textContent = "Dear, "+this.name +" today is evidently not your day. You only managed: "+this.calculatePercentage()+'% !';
                rec.textContent = this.getRecommendation();
             }
