@@ -32,9 +32,9 @@
 	/*retrieve data from the website*/
 	async function onGet(req, res) {
 		const routeParams = req.params;
-		const testname = routeParams.name;
+		const testEmail = routeParams.email;
 		const query = {
-			name: testname
+			email: testEmail
 		};
 
 		const response = await collection.findOne(query);
@@ -56,7 +56,7 @@
 			res.json(arr);
 		}
 	}
-	app.get('/get/:name',jsonParser, onGet);
+	app.get('/get/:email',jsonParser, onGet);
 
 	
 

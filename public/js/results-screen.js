@@ -64,7 +64,7 @@
             const fetchOptions2= {
               method: 'GET'
                    };
-          let rs  = await fetch('/get/'+this.name,fetchOptions2);
+          let rs  = await fetch('/get/'+this.email,fetchOptions2);
           let test = await rs.json();  
           let cumulativeScore = this.numCorrect;
           if (test[0].contained){
